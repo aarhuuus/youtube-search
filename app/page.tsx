@@ -58,37 +58,39 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <header className="border-b sticky top-0 z-10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
+        <div className="container flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2">
-            <YoutubeIcon className="h-6 w-6 text-red-600" />
-            <h1 className="text-xl font-semibold">YouTube Search</h1>
+            <YoutubeIcon className="h-5 w-5 sm:h-6 sm:w-6 text-red-600" />
+            <h1 className="text-lg sm:text-xl font-semibold">YouTube Search</h1>
           </div>
           <ThemeToggle />
         </div>
       </header>
 
       <main className="flex-1">
-        <section className="py-12 bg-muted/40">
-          <div className="container flex flex-col items-center text-center">
-            <h2 className="text-3xl font-bold tracking-tight mb-6">Find the perfect YouTube video</h2>
-            <p className="text-muted-foreground max-w-[600px] mb-8">
+        <section className="py-8 sm:py-12 bg-muted/40">
+          <div className="container flex flex-col items-center text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-4 sm:mb-6">
+              Find the perfect YouTube video
+            </h2>
+            <p className="text-sm sm:text-base text-muted-foreground max-w-[600px] mb-6 sm:mb-8">
               Search through millions of videos with our fast and responsive search tool.
             </p>
             <SearchBar onSearch={handleSearch} isLoading={loading} />
           </div>
         </section>
 
-        <section className="container py-8">
+        <section className="container py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
           <SearchResults results={results} loading={loading} error={error} query={query} />
         </section>
       </main>
 
-      <footer className="border-t py-6 md:py-0">
-        <div className="container flex flex-col items-center justify-between gap-4 md:h-16 md:flex-row">
-          <p className="text-sm text-muted-foreground">
+      <footer className="border-t py-4 sm:py-6 md:py-0">
+        <div className="container flex flex-col items-center justify-between gap-2 sm:gap-4 md:h-16 md:flex-row px-4 sm:px-6 lg:px-8">
+          <p className="text-xs sm:text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} YouTube Search. All rights reserved.
           </p>
-          <p className="text-sm text-muted-foreground">Not affiliated with YouTube</p>
+          <p className="text-xs sm:text-sm text-muted-foreground">Not affiliated with YouTube</p>
         </div>
       </footer>
     </div>

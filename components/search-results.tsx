@@ -33,8 +33,8 @@ export function SearchResults({ results, loading, error, query }: SearchResultsP
       <div className="space-y-4">
         {[...Array(3)].map((_, i) => (
           <Card key={i} className="overflow-hidden">
-            <div className="flex flex-col sm:flex-row">
-              <Skeleton className="h-32 sm:w-48" />
+            <div className="flex flex-col md:flex-row">
+              <Skeleton className="h-48 md:h-32 w-full md:w-48" />
               <div className="flex-1 p-4">
                 <div className="space-y-2">
                   <Skeleton className="h-4 w-3/4" />
@@ -43,7 +43,7 @@ export function SearchResults({ results, loading, error, query }: SearchResultsP
                     <Skeleton className="h-4 w-1/4" />
                   </div>
                   <div className="pt-2">
-                    <Skeleton className="h-8 w-32" />
+                    <Skeleton className="h-8 w-full sm:w-32" />
                   </div>
                 </div>
               </div>

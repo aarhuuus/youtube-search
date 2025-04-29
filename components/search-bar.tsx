@@ -23,7 +23,7 @@ export function SearchBar({ onSearch, isLoading }: SearchBarProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex w-full max-w-3xl gap-2">
+    <form onSubmit={handleSubmit} className="flex w-full max-w-3xl gap-2 px-4 sm:px-0">
       <div className="relative flex-1">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground" size={18} />
         <Input
